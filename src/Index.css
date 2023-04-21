@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFC500;
+}
+
+
+#grid-banner-index{
+    margin: 1%;
+    background-color: #7F0909;
+
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    grid-template-areas:
+    "logo titulo link"
+    ;
+    padding: 1%;
+}
+
+#logo-banner-index img{
+    grid-area: logo;
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#titulo-banner-index{
+    grid-area: titulo;
+    text-align: center;
+}
+#titulo-banner-index h1{
+    font-family: 'Harry Potter', sans-serif;
+    color: #c09501;
+}
+#pagina-banner-index{
+    grid-area: link;
+    text-align: center;
+    border-radius: 5px;
+    background: transparent;
+    transition: background .5s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pagina-banner-index a{
+    text-decoration: none;
+    color: #c09501;
+    font-size: 1.5em;
+    font-family: 'Harry Potter', sans-serif;
+}
+#pagina-banner-index:hover{
+    background: rgba(79, 68, 10, 0.93) !important;
+}
+
+#centro-pagina-principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas:
+    "API ROL"
+    ;
+
+}
+
+#cuadro-interior-api{
+    border: 2px #7F0909 solid;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2%;
+    background-color: #7F0909;
+    text-align: center;
+}
+#titulo-api{
+    border-bottom: 2px #c09501 solid;
+    color: #c09501;
+    font-size: 200%;
+    font-family: 'ARKHAM', sans-serif;
+
+
+}
+#descripcion-api{
+    color: #c09501;
+    font-size: 175%;
+    font-family: 'ARKHAM', sans-serif;
+
+
+}
+#cuadro-busqueda{
+     margin: 2%;
+}
+#cuadro-api{
+    border: 2px rgba(79, 68, 10, 0.93) solid;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
