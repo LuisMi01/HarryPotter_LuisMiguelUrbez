@@ -16,17 +16,21 @@ El API almacenará los datos persistentes en una base de datos MySQL o MariaDB (
 ### 2.1 Colecciones 
   De cara a poder definir las columnas a usar en las tablas, es necesario conocer las colecciones de datos.
   Destacar que si el alumno necesita almacenar datos extra, podrá hacerlo sin problema alguno, la siguiente lista de columnas es meramente orientativa:<br>
-__2.1.1. Película__
-  id - Identificador único (autoincremental) title - Título de la película<br>
-  length - Longitud en minutos de la película sinopsis - Resumen de la película<br>
+__2.1.1. Película__<br>
+  id - Identificador único (autoincremental) <br>
+  title - Título de la película<br>
+  length - Longitud en minutos de la película <br>
+  sinopsis - Resumen de la película<br>
   year - Año de emisión<br>
-  __2.1.2. Personaje__
-  id - Identificador único (autoincremental) name - Nombre del personaje<br>
+  __2.1.2. Personaje__<br>
+  id - Identificador único (autoincremental) <br>
+  name - Nombre del personaje<br>
   desc - Descripción del personaje<br>
   
 ### 2.2 pelicula_personajes
-  Esta tabla se usará para cruzar datos entre las dos anteriores idPelicula - Identificador de película
-  idPersonaje - Identificador de personaje<br>
+  Esta tabla se usará para cruzar datos entre las dos anteriores
+  <br>idPelicula - Identificador de película
+  <br>idPersonaje - Identificador de personaje<br>
 
 ## 3 API REST<br>
  El API debe ofrecer un CRUD 1 completo sobre las colecciones: <br>
@@ -47,7 +51,7 @@ __Devolverá el estado final de cada personaje tras el combate.__<br>
   -PUT /combate/:idPersonaje - Poder cambiar atributos al personaje (curación); en el cuerpo del mensaje se enviarán los nuevos atributos<br>
 Obviamente, tras un combate, al volver a consultar el GET, obtendremos el estado del personaje tras el combate.<br>
 
-## Autenticacion y control de acceso
+## 4 Autenticacion y control de acceso
   El API para consultas será de libre acceso, pero para añadir o modificar datos así como realizar combates, el usuario deberá estar autenticado.<br>
 <br>A modo de guía, se recomienda:<br>
   <br>-Crear una tabla de usuarios con login y password en la base de datos. La contraseña debería estar cifrada con un HASH (SHA1)<br>

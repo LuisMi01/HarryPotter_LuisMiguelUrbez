@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #FFC500;
+    background-color: #deab01;
 }
 
 
@@ -34,7 +34,7 @@ body{
 }
 #titulo-banner-index h1{
     font-family: 'Harry Potter', sans-serif;
-    color: #c09501;
+    color: #ECE2A8FF;
 }
 #pagina-banner-index{
     grid-area: link;
@@ -48,7 +48,7 @@ body{
 }
 #pagina-banner-index a{
     text-decoration: none;
-    color: #c09501;
+    color: #ECE2A8FF;
     font-size: 1.5em;
     font-family: 'Harry Potter', sans-serif;
 }
@@ -67,23 +67,28 @@ body{
 }
 
 #cuadro-interior-api{
-    border: 2px #7F0909 solid;
+    border: 5px #660303FF solid;
     border-radius: 10px;
     padding: 1%;
     margin: 2%;
     background-color: #7F0909;
     text-align: center;
+    transition: all  1s cubic-bezier(1, 1.2, 1, 1.2);
 }
+#cuadro-interior-api:hover{
+    box-shadow: inset 0 0 100px rgba(127, 9, 9, 0.7), 0 0 80px rgb(236, 226, 168);
+}
+
 #titulo-api{
     border-bottom: 2px #c09501 solid;
-    color: #c09501;
+    color: #ECE2A8FF;
     font-size: 200%;
     font-family: 'ARKHAM', sans-serif;
 
 
 }
 #descripcion-api{
-    color: #c09501;
+    color: #ECE2A8FF;
     font-size: 175%;
     font-family: 'ARKHAM', sans-serif;
 
@@ -97,8 +102,41 @@ body{
     background-color: white;
 }
 
+#cuadro-interior-combate{
+    border: 5px #660303FF solid;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2%;
+    background-color: #7F0909;
+    text-align: center;
+    transition: all  1s cubic-bezier(1, 1.2, 1, 1.2);
+}
+#cuadro-interior-combate:hover{
+    box-shadow: inset 0 0 100px rgba(127, 9, 9, 0.7), 0 0 80px rgb(236, 226, 168);
+}
 
-
+#juego-rol-titulo{
+    border-bottom: 2px #c09501 solid;
+    color: #ECE2A8FF;
+    font-size: 200%;
+    font-family: 'ARKHAM', sans-serif;
+}
+#descripcion-juego{
+    color: #ECE2A8FF;
+    font-size: 175%;
+    font-family: 'ARKHAM', sans-serif;
+}
+#boton-login button{
+    font-size: 220%;
+    padding: 7%;
+    font-family: 'ARKHAM', sans-serif;
+    background-color: rgba(79, 68, 10, 0.93);
+    border: 2px #c09501 solid;
+    border-radius: 10px;
+    color: #ECE2A8FF;
+    letter-spacing: 0.1em;
+    margin-bottom: 3%;
+}
 
 
 
