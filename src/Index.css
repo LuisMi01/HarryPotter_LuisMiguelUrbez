@@ -130,7 +130,7 @@ body{
     font-size: 220%;
     padding: 7%;
     font-family: 'ARKHAM', sans-serif;
-    background-color: rgba(91, 78, 11, 0.93);
+    background-color: #4CAF50;
     border: 2px #c09501 solid;
     border-radius: 10px;
     letter-spacing: 0.1em;
@@ -144,7 +144,7 @@ body{
 }
 #boton-login a{
     text-decoration: none;
-    color: #ECE2A8FF;
+    color: white;
 
 }
 

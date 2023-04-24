@@ -11,23 +11,15 @@
     <link rel="stylesheet" href="InicioSesion.css">
 </head>
 <body>
-    <section id="principal-iniciar-sesion">
-        <div id="iniciar-sesion">
-            <div id="titulo-inicio-sesion">
-                <h1>INICIO SESION</h1>
-            </div>
-            <div id="formulario-inicio-sesion">
-                <form action="#" method="post">
-                    <input type="hidden" name="oculto" value="123">
-                    <label for="nombre">Usuario:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Usuario"></input>
-                    <br>
-                    <label id="clave" for="clave">Clave:</label>
-                    <input type="password" name="passwd" placeholder="Clave"></input>
-                    <br><br>
-                    <input type="button" id="guardarProfe" value="Enviar"></input>
-                </form>
-        </div>
-    </section>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form">
+            <input type="text" placeholder="Usuario"/>
+            <input type="password" placeholder="Contraseña"/>
+            <a href="../Index.html"><button>Iniciar sesión</button></a>
+            <p class="message">¿Olvidaste tu contraseña? <a href="../Index.html">Recuperar aquí</a></p>
+        </form>
+    </div>
+</div>
 </body>
 </html>
