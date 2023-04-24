@@ -126,20 +126,26 @@ body{
     font-size: 175%;
     font-family: 'ARKHAM', sans-serif;
 }
-#boton-login button{
+#boton-login {
     font-size: 220%;
     padding: 7%;
     font-family: 'ARKHAM', sans-serif;
     background-color: rgba(79, 68, 10, 0.93);
     border: 2px #c09501 solid;
     border-radius: 10px;
-    color: #ECE2A8FF;
     letter-spacing: 0.1em;
     margin-bottom: 3%;
+    margin-right: 10%;
+    margin-left: 10%;
     transition: transform 0.5s ease-in-out;
 }
-#boton-login button:hover{
+#boton-login:hover{
     transform: scale(1.1);
+}
+#boton-login a{
+    text-decoration: none;
+    color: #ECE2A8FF;
+
 }
 
 
