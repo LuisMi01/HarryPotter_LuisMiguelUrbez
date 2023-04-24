@@ -136,6 +136,10 @@ body{
     color: #ECE2A8FF;
     letter-spacing: 0.1em;
     margin-bottom: 3%;
+    transition: transform 0.5s ease-in-out;
+}
+#boton-login button:hover{
+    transform: scale(1.1);
 }
 
 
