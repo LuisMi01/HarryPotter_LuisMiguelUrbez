@@ -11,10 +11,23 @@
     <link rel="stylesheet" href="InicioSesion.css">
 </head>
 <body>
-    <div id="volver-casa">
-
-            <a href="../Index.html">PAGINA PRINCIPAL</a>
-
-    </div>
+    <section id="principal-iniciar-sesion">
+        <div id="iniciar-sesion">
+            <div id="titulo-inicio-sesion">
+                <h1>INICIO SESION</h1>
+            </div>
+            <div id="formulario-inicio-sesion">
+                <form action="#" method="post">
+                    <input type="hidden" name="oculto" value="123">
+                    <label for="nombre">Usuario:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Usuario"></input>
+                    <br>
+                    <label id="clave" for="clave">Clave:</label>
+                    <input type="password" name="passwd" placeholder="Clave"></input>
+                    <br><br>
+                    <input type="button" id="guardarProfe" value="Enviar"></input>
+                </form>
+        </div>
+    </section>
 </body>
 </html>

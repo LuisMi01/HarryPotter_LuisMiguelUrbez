@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #deab01;
+}
+
+#principal-iniciar-sesion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#iniciar-sesion{
+    border: 5px #660303FF solid;
+    background-color: #7F0909;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+#titulo-inicio-sesion{
+    color: #ECE2A8FF;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 150%;
+    border-bottom: 2px solid #deab01;
+}
+#formulario-inicio-sesion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    padding: 10%;
+    font-family: ARKHAM;
+    font-size: 120%;
+    color: #ECE2A8FF;
+    letter-spacing: 0.07em;
+}
+
