@@ -1,5 +1,5 @@
 'use strict'
-
+console.log(process.env);
 const mysql = require('mysql');
 
 const personajes = require('./router/VistaPersonaje/IndexVistaPersonaje')
@@ -22,7 +22,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'LuisMiguel2303',
-    database: 'peliculas'
+    database: 'harrypotter'
 });
 
 connection.connect((error) => {
