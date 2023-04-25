@@ -1,5 +1,7 @@
 'use strict'
 
+const mysql = require('mysql');
+
 const personajes = require('./router/VistaPersonaje/IndexVistaPersonaje')
 const pelculas = require('./router/VistaPelicula/IndexVistaPelicula')
 
@@ -16,8 +18,22 @@ app.use(bodyParser.json({ limit: '1mb' }))
 app.get('/', (req, res, next) => {
     res.send("HOLA")
 })
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'LuisMiguel2303',
+    database: 'peliculas'
+});
 
+connection.connect((error) => {
+    if (error) {
+        console.error('Error al conectarse a la base de datos: ', error);
+        return;
+    }
+
+    console.log('Conectado a la base de datos!');
+});
 app.use('/personajes', personajes)
-app.use('/peliculas', peliculas)
+app.use('/peliculas', pelculas)
 
-app.listen(3033)
+app.listen(3000)
