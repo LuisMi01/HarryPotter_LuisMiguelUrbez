@@ -147,6 +147,39 @@ body{
     color: white;
 
 }
+#input-busqueda{
+    width: 80%;
+    height: 80%;
+    border: 5px #c09501 solid;
+    border-radius: 10px;
+    font-family: 'ARKHAM', sans-serif;
+    padding: 1%;
+    margin: 2%;
+    font-size: 120%;
+    background-color: #ECE2A8FF;
+    color: black;
+    transition: transform 0.5s ease-in-out;
+}
+#input-busqueda:hover{
+    transform: scale(1.01);
+}
+#buscar-btn{
+    width: 80%;
+    height: 80%;
+    border: 5px #c09501 solid;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'ARKHAM', sans-serif;
+    padding: 1%;
+    margin: 1%;
+    background-color: #ECE2A8FF;
+    color: #7F0909;
+    font-size: 150%;
+    transition: transform 0.5s ease-in-out;
+}
+#buscar-btn:hover{
+    transform: scale(1.02);
+}
 
 
 
