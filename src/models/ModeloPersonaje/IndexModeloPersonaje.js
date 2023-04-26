@@ -37,8 +37,9 @@ function getPersonaje(id) {
 
 module.exports = {
     get: {
-        all: getPersonajes(),
-        byId: getPersonaje()
+        all: getPersonajes,
+        byId: getPersonaje
     },
-    add: addPersonaje()
+    add: addPersonaje
 }
+
