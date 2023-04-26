@@ -1,7 +1,7 @@
 'use strict'
 
 const router = require('express').Router()
-const controladorPeliculas = require('../../controllers/ControladorPelicula/IndexControladorPelicula.js')
+const controladorPeliculas = require('../controllers/ControladorPelicula/IndexControladorPelicula.js')
 router.get('/', async (req, res, next) => {
     (await controladorPeliculas.get.all)()
         .then(peliculas => res.send(peliculas))

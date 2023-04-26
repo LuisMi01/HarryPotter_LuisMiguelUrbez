@@ -1,12 +1,24 @@
-window.addEventListener('load', () => {
-    let p = new URLSearchParams(document.location.search)
-    let res = p.get('id')
+'use strict'
+async function cargarPersonajes(){
+    let res = await fetch('http://localhost:3003/personajes')
+    let personajes = await res.text();
 
-    let marco = document.getElementById('resultados')
+    let personajesDOM = document.getElementById('resultados');
 
-    fetch('http://localhost:3003' + res)
-        .then(res => res.json())
-        .then(marco => {
-            marco.innerText = marco.id
-        })
-})
+    try{
+        personajes = JSON.parse(personajes);
+
+        personajes.forEach(element => {
+            let li = document.createElement('li');
+            li.innerHTML = personajes.name;
+            personajesDOM.appendChild(li);
+        });
+
+    }catch(err){
+        console.log(err);
+    }
+}
+
+window.onload = () => {
+    cargarPersonajes().then(r => console.log('Personajes cargados'));
+}
