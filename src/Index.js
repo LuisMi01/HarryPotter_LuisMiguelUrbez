@@ -1,39 +1,54 @@
 'use strict'
-console.log(process.env);
-const mysql = require('mysql');
 
-const personajes = require('./router/VistaPersonaje/IndexVistaPersonaje')
-const pelculas = require('./router/VistaPelicula/IndexVistaPelicula')
+const mysql = require('mysql2');
+
+//const peliculas = require('./router/VistaPelicula/IndexVistaPelicula')
+//const personaje = require('router/VistaPersonaje')
+
 
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const res = require("express/lib/response");
 
 app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: false, limit: '1mb' }))
 app.use(bodyParser.json({ limit: '1mb' }))
 
+
 app.get('/', (req, res, next) => {
     res.send("HOLA")
 })
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'LuisMiguel2303',
-    database: 'harrypotter'
-});
+const pool = mysql.createPool({
+    host:"localhost",
+    database:"peliculas",
+    user:"root",
+    password:"LuisMiguel2303",
+    connectionLimit: 10
+})
 
-connection.connect((error) => {
-    if (error) {
-        console.error('Error al conectarse a la base de datos: ', error);
-        return;
+pool.query('SELECT * FROM peliculas.pelicula', (err, res, fields) => {
+    if(err){
+        console.log(err)
+        return
     }
+    console.log('Fields', fields)
+    console.log('Resultados', res)
 
-    console.log('Conectado a la base de datos!');
-});
-app.use('/personajes', personajes)
-app.use('/peliculas', pelculas)
+})
+pool.query('SELECT * FROM peliculas.personaje', (err, res, fields) => {
+    if(err){
+        console.log(err)
+        return
+    }
+    console.log('Fields', fields)
+    console.log('Resultados', res)
 
-app.listen(3000)
+})
+
+//app.use('/personajes', personajes)
+//app.use('/peliculas', peliculas)
+
+app.listen(3003)
