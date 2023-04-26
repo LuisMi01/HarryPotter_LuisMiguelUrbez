@@ -14,6 +14,8 @@ router.get('/:id', async (req, res, next) => {
         .catch(err => res.send('ERROR'))
 })
 
+
+
 router.post('/', (req, res, next) => {
     controladorPersonajes.add(req.body)
     res.send('Pelicula agregada')
