@@ -9,7 +9,7 @@ router.get('/', async (req, res, next) => {
 })
 
 router.get('/:id', async (req, res, next) => {
-    (await controladorPersonajes.get.byId)(req.params.id)
+    (await controladorPersonajes.get.byId) (req.params.id)
         .then(peliculas => res.send(peliculas))
         .catch(err => res.send('ERROR'))
 })
