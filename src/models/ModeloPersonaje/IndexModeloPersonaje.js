@@ -1,7 +1,7 @@
 'use strict'
 
-const config = require('config').database
-const mysql = require('mysql')
+const config = require('config')
+const mysql = require('mysql2')
 
 const pool = mysql.createPool({
     ...config,
@@ -29,10 +29,10 @@ function addPersonaje(personaje) {
     dbPersonajes.push(personaje)
 }
 function getPersonajes() {
-    return query('SELECT * FROM peliculas.personajes')
+    return query('SELECT * FROM peliculas.personaje')
 }
 function getPersonaje(id) {
-    return query('SELECT * FROM peliculas.personajes WHERE id = ?', [id])
+    return query('SELECT * FROM peliculas.personaje WHERE id = ?', [id])
 }
 
 module.exports = {

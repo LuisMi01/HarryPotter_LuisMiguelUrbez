@@ -1,39 +1,52 @@
 'use strict'
-console.log(process.env);
+
 const mysql = require('mysql');
-
-const personajes = require('./router/VistaPersonaje/IndexVistaPersonaje')
-const pelculas = require('./router/VistaPelicula/IndexVistaPelicula')
-
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const res = require("express/lib/response");
+
+const personajes = require('./router/IndexVistaPersonaje')
+const pelicula = require('./router/IndexVistaPelicula')
 
 app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: false, limit: '1mb' }))
 app.use(bodyParser.json({ limit: '1mb' }))
 
-app.get('/', (req, res, next) => {
-    res.send("HOLA")
+
+const pool = mysql.createPool({
+    host:"localhost",
+    database:"peliculas",
+    user:"root",
+    password:"LuisMiguel2303",
+    connectionLimit: 10
 })
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'LuisMiguel2303',
-    database: 'harrypotter'
+app.get('/', function(req, res) {
+    res.send('hola mundo')
+})
+app.get('/personajes', function(req, res) {
+    pool.query('SELECT * FROM peliculas.personaje', (err, results) => {
+        if(err){
+            res.send('Error al obtener datos');
+        } else {
+            res.json(results);
+        }
+    });
 });
+app.get('/peliculas', function(req, res) {
+    pool.query('SELECT * FROM peliculas.pelicula', (err, results) => {
+        if(err){
+            res.send('Error al obtener datos');
+        } else {
+            res.json(results);
+        }
+    });
+})
 
-connection.connect((error) => {
-    if (error) {
-        console.error('Error al conectarse a la base de datos: ', error);
-        return;
-    }
 
-    console.log('Conectado a la base de datos!');
-});
 app.use('/personajes', personajes)
-app.use('/peliculas', pelculas)
+app.use('/peliculas', pelicula)
 
-app.listen(3000)
+app.listen(3003)
