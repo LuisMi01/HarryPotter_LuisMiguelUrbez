@@ -24,7 +24,7 @@ const pool = mysql.createPool({
     connectionLimit: 10
 })
 app.get('/', function(req, res) {
-    res.send('Bienvenido al localhost:3003, para moverse entre la api puede urilizar la barra de busqueda. Poniendo /perosnajes, le enseñara todos los personajes disponibles, al igual que con /peliculas. Si especifica un poco mas se encontrara con un solo personaje que quiera obtener al poner en la url /personajes/idPersonaje, al igual que con las peliculas /peliculas/idPelicula')
+    res.send('Bienvenido al localhost:3003, para moverse entre la api puede urilizar la barra de busqueda. Poniendo /perosnaje, le enseñara todos los personajes disponibles, al igual que con /pelicula. Si especifica un poco mas se encontrara con un solo personaje que quiera obtener al poner en la url /personaje/idPersonaje, al igual que con las peliculas /pelicula/idPelicula')
 })
 app.get('/personaje', function(req, res) {
     pool.query('SELECT * FROM peliculas.personaje', (err, results) => {

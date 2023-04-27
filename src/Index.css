@@ -181,6 +181,24 @@ body{
     transform: scale(1.02);
 }
 
+#resultados{
+    background-color: #4CAF50;
+    font-family: ARKHAM, sans-serif;
+    padding: 3%;
+}
+#cuadro-api{
+    border-radius: 10px;
+    background-color: #4CAF50;
+    border: 5px #c09501 solid;
+    font-family: ARKHAM, sans-serif;
+}
+#cuadro-api p{
+    margin: 3%;
+    font-size: 150%;
+    color: black;
+    border-bottom: 4px #c09501 solid;
+}
+
 
 
 
