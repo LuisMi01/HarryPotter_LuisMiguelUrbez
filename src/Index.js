@@ -24,9 +24,9 @@ const pool = mysql.createPool({
     connectionLimit: 10
 })
 app.get('/', function(req, res) {
-    res.send('hola mundo')
+    res.send('Bienvenido al localhost:3003, para moverse entre la api puede urilizar la barra de busqueda. Poniendo /perosnajes, le enseñara todos los personajes disponibles, al igual que con /peliculas. Si especifica un poco mas se encontrara con un solo personaje que quiera obtener al poner en la url /personajes/idPersonaje, al igual que con las peliculas /peliculas/idPelicula')
 })
-app.get('/personajes', function(req, res) {
+app.get('/personaje', function(req, res) {
     pool.query('SELECT * FROM peliculas.personaje', (err, results) => {
         if(err){
             res.send('Error al obtener datos');
@@ -35,7 +35,17 @@ app.get('/personajes', function(req, res) {
         }
     });
 });
-app.get('/peliculas', function(req, res) {
+app.get('/personaje/:id', function(req, res) {
+    pool.query('SELECT * FROM peliculas.personaje WHERE id = ?', [req.params.id], (err, results) => {
+        if(err){
+            res.send('Error al obtener datos');
+        } else {
+            res.json(results);
+        }
+    });
+})
+
+app.get('/pelicula', function(req, res) {
     pool.query('SELECT * FROM peliculas.pelicula', (err, results) => {
         if(err){
             res.send('Error al obtener datos');
@@ -45,8 +55,17 @@ app.get('/peliculas', function(req, res) {
     });
 })
 
+app.get('/pelicula/:id', function(req, res) {
+    pool.query('SELECT * FROM peliculas.pelicula WHERE id = ?', [req.params.id], (err, results) => {
+        if(err){
+            res.send('Error al obtener datos');
+        } else {
+            res.json(results);
+        }
+    });
+})
 
-app.use('/personajes', personajes)
-app.use('/peliculas', pelicula)
+app.use('/personaje', personajes)
+app.use('/pelicula', pelicula)
 
 app.listen(3003)
