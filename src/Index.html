@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>Pagina Principal</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="Llamadas.js"></script>
     <link rel="stylesheet" href="Index.css">
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
@@ -31,24 +33,48 @@
         <section id="api">
                 <div id="cuadro-interior-api">
                     <div id="titulo-api">
-                        <h1>¡Busca informacion en la API!</h1>
+                        <h1>BUSCA EN LA API</h1>
+                        </div>
+                    <div class="tabs">
+                        <div class="tab-container">
+                            <div id="tab2" class="tab">
+                                <a href="#tab2">PELICULAS</a>
+                                <div class="tab-content">
+                                    <h2>BUSQUEDA DE PELICULAS</h2>
+                                    <p>Aqui podras encontrar un filtro para buscar entre las peliculas de la saga disponibles</p>
+                                    <p>La forma de usar el buscador es insertar el numero (id) de la pelicula que quieras buscar</p>
+                                    <p>Por ejemplo, si introduces el numero 2, te enseñara los datos de la tercera pelicula (ya que las peliculas van de la 0-7).</p>
+                                    <div class="cuadro-busqueda">
+                                        <input class="input-busqueda" type="search" name="id" placeholder="Ingrese el ID" autofocus required>
+                                        <button class="buscar-btn" type="button">Buscar</button>
+                                    </div>
+                                    <div class="cuadro-api">
+                                        <p>RESULTADOS:</p>
+                                        <div class="resultados"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab1" class="tab">
+                                <a href="#tab1">PERSONAJES</a>
+                                <div class="tab-content">
+                                    <h2>BUSQUEDA DE PERSONAJES</h2>
+                                    <p>Aqui podras encontrar un filtro para buscar entre los personajes de la saga disponibles</p>
+                                    <p>La forma de usar el buscador es insertar el numero (id) del personaje que quieras buscar</p>
+                                    <p>Por ejemplo, si introduces el numero 2, te enseñara los datos del tercer personaje (ya que los personajes van del 0-64).</p>
+                                    <div class="cuadro-busqueda">
+                                        <input class="input-busqueda" type="search" name="id" placeholder="Ingrese el ID " autofocus required>
+                                        <button class="buscar-btn" type="button">Buscar</button>
+                                    </div>
+                                    <div class="cuadro-api">
+                                        <p>RESULTADOS:</p>
+                                        <div class="resultados"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="descripcion-api">
-                        <p>Aqui encontaras un buscador integrado sobre personajes y peliculas de la saga</p>
-                        <p>Para consultar la informacion tienes que meter el id (numero entero) del personaje o pelicula que quieres buecar</p>
-                        <p>Por ejemplo, si introduces el numero 1, te enseñara el personaje numero 1 de la saga, e igual para las peliculas de la saga</p>
-                    </div>
-                    <div id="cuadro-busqueda">
-                        <input id="input-busqueda" type="search" name="id" placeholder="Ingrese el ID del personaje" autofocus required>
-                        <button id="buscar-btn" type="button">Buscar</button>
-                    </div>
-                    <div id="cuadro-api">
-                        <p>RESULTADOS:</p>
-                        <div id="resultados"></div>
                     </div>
 
-
-                </div>
         </section>
         <section id="combate">
                 <div id="cuadro-interior-combate">
