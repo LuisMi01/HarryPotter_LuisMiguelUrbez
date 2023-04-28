@@ -56,6 +56,8 @@ body{
     background: rgba(79, 68, 10, 0.93) !important;
 }
 
+/*-------------Zona central pagina-----------------*/
+
 #centro-pagina-principal{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,23 +86,11 @@ body{
     color: #ECE2A8FF;
     font-size: 200%;
     font-family: 'ARKHAM', sans-serif;
-    margin: 0 3% 4% 3%;
+    margin: 0 1.5% 4% 1.5%;
 
 }
-#descripcion-api{
-    color: #ECE2A8FF;
-    font-size: 175%;
-    font-family: 'ARKHAM', sans-serif;
 
-
-}
-#cuadro-busqueda{
-     margin: 2%;
-}
-#cuadro-api{
-    border: 2px rgba(79, 68, 10, 0.93) solid;
-    background-color: white;
-}
+/*-------------------------Zona combate---------------------*/
 
 #cuadro-interior-combate{
     border: 5px #660303FF solid;
@@ -149,7 +139,7 @@ body{
     color: white;
 
 }
-
+/*-----------------------Pestañas peliculas y personajes---------------*/
 
 .tab-content {
     display: none;
@@ -173,7 +163,7 @@ body{
     --tabs-height: 80px;
 }
 
-/* aspecto básico */
+
 h2, p {
     margin: 0;
 }
@@ -242,7 +232,9 @@ a {
     padding: 2%;
 }
 
-.input-busqueda{
+/*------------------Cuadro peliculas busqueda---------------*/
+
+#input-busqueda{
     width: 80%;
     height: 80%;
     border: 5px #c09501 solid;
@@ -252,13 +244,13 @@ a {
     margin: 2%;
     font-size: 120%;
     background-color: #ECE2A8FF;
-    color: black;
+
     transition: transform 0.5s ease-in-out;
 }
-.input-busqueda:hover{
+#input-busqueda:hover{
     transform: scale(1.01);
 }
-.buscar-btn{
+#buscar-btn{
     width: 80%;
     height: 80%;
     border: 5px #c09501 solid;
@@ -272,30 +264,101 @@ a {
     font-size: 150%;
     transition: transform 0.5s ease-in-out;
 }
-.buscar-btn:hover{
+#buscar-btn:hover{
     transform: scale(1.02);
 }
 
-.resultados{
+#resultados{
     background-color: #4CAF50;
     font-family: ARKHAM, sans-serif;
     padding: 3%;
 }
-.cuadro-api{
+#cuadro-api{
     border-radius: 10px;
     background-color: #4CAF50;
     border: 5px #c09501 solid;
     font-family: ARKHAM, sans-serif;
+    margin: 3%;
 }
-.cuadro-api h1{
+#cuadro-api h1{
     margin: 3%;
     font-size: 150%;
-    color: black;
     border-bottom: 4px #c09501 solid;
+    color: #420202;
+
+}
+#resultados p{
+
+    font-family: AppleMyungjo, sans-serif;
+    font-size: 120%;
+    margin: 2%;
+    color: #420202;
 }
 
 
+/*------------------Cuadro personajes busqueda---------------*/
 
+
+
+#input-busqueda2{
+    width: 80%;
+    height: 80%;
+    border: 5px #c09501 solid;
+    border-radius: 10px;
+    font-family: 'ARKHAM', sans-serif;
+    padding: 1%;
+    margin: 2%;
+    font-size: 120%;
+    background-color: #ECE2A8FF;
+
+    transition: transform 0.5s ease-in-out;
+}
+#input-busqueda2:hover{
+    transform: scale(1.01);
+}
+#buscar-btn2{
+    width: 80%;
+    height: 80%;
+    border: 5px #c09501 solid;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'ARKHAM', sans-serif;
+    padding: 1%;
+    margin: 1%;
+    background-color: #ECE2A8FF;
+    color: #7F0909;
+    font-size: 150%;
+    transition: transform 0.5s ease-in-out;
+}
+#buscar-btn2:hover{
+    transform: scale(1.02);
+}
+
+#resultados2{
+    background-color: #4CAF50;
+    font-family: ARKHAM, sans-serif;
+    padding: 3%;
+}
+#cuadro-api2{
+    border-radius: 10px;
+    background-color: #4CAF50;
+    border: 5px #c09501 solid;
+    font-family: ARKHAM, sans-serif;
+    margin: 3%;
+}
+#cuadro-api2 h1{
+    margin: 3%;
+    font-size: 150%;
+    border-bottom: 4px #c09501 solid;
+    color: #420202;
+
+}
+#resultados2 p{
+    font-family: AppleMyungjo, sans-serif;
+font-size: 120%;
+    margin: 2%;
+    color: #420202;
+}
 
 
 
