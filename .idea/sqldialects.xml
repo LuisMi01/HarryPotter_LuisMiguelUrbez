@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/Index.js" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/Sesion/models/IndexModelsUser.js" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/models/ModeloPelicula/IndexModeloPelicula.js" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/models/ModeloPersonaje/IndexModeloPersonaje.js" dialect="GenericSQL" />
   </component>

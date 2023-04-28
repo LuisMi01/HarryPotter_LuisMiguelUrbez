@@ -79,7 +79,7 @@ async function buscarPelicula() {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-document.getElementById('buscar-btn').addEventListener('click', buscarPelicula);
+    document.getElementById('buscar-btn').addEventListener('click', buscarPelicula);
     document.getElementById('buscar-btn2').addEventListener('click', buscarPersonaje);
 });
 
