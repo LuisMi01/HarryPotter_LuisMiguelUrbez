@@ -1,5 +1,6 @@
 'use strict'
-
+alert('¡Hola! Bienvenido al proyecto de Harry Potter API realizado por Luis Miguel Urbez Villar')
+alert('Los puertos a utilizar para la primeras partes de la api (peliculas y personajes) es el 3003, para el login y combate es el 3002, ¡Que la magia te acompañe!')
 async function buscarPersonaje() {
     let resultadosDOM = document.getElementById('resultados2');
     let id = parseInt(document.getElementById('input-busqueda2').value);
@@ -7,7 +8,6 @@ async function buscarPersonaje() {
         alert('Debe ingresar un número válido');
         return;
     }
-
     try {
         let res = await fetch('http://localhost:3003/personaje/' + id);
         let personaje = await res.json();
@@ -27,7 +27,7 @@ async function buscarPersonaje() {
         p3.innerHTML = 'Descripcion: ' + personaje[0].desc;
         resultadosDOM.appendChild(p3);
 
-    } catch (error) {
+    }catch (error) {
         console.error(error);
         alert("El id es incorrecto, por favor introduzca numeros entre el 0 y 64 (incluidos)")    }
 }
@@ -79,7 +79,7 @@ async function buscarPelicula() {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-document.getElementById('buscar-btn').addEventListener('click', buscarPelicula);
+    document.getElementById('buscar-btn').addEventListener('click', buscarPelicula);
     document.getElementById('buscar-btn2').addEventListener('click', buscarPersonaje);
 });
 
